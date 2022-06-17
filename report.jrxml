@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.1.final using JasperReports Library version 6.19.1-867c00bf88cd4d784d404379d6c05e1b419e8a4c  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e4212005-387f-4c03-abfb-de9857756122">
+	<parameter name="billNo" class="java.lang.Long"/>
+	<parameter name="billDate" class="java.util.Date"/>
+	<parameter name="doctorFirstName" class="java.lang.String"/>
+	<parameter name="doctorLastName" class="java.lang.String"/>
+	<parameter name="patientFirstName" class="java.lang.String"/>
+	<parameter name="patientLastName" class="java.lang.String"/>
+	<parameter name="gender" class="java.lang.String"/>
+	<parameter name="age" class="java.lang.Integer"/>
+	<parameter name="disease" class="java.lang.String"/>
+	<parameter name="medicine" class="java.lang.String"/>
+	<parameter name="fees" class="java.lang.Integer"/>
+	<parameter name="Parameter12" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="129" splitType="Stretch">
+			<staticText>
+				<reportElement x="160" y="15" width="210" height="50" uuid="95bdba79-b487-4c01-b2af-4c6adad18298"/>
+				<textElement>
+					<font size="26"/>
+				</textElement>
+				<text><![CDATA[Hospital Invoice]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="405" y="64" width="100" height="30" uuid="e82e7cca-8f1d-4e3b-b7fa-9ec59dfeee5d"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Bill No : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="405" y="90" width="100" height="30" uuid="17eb2129-a557-49af-bd05-97aca87426c2"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Date: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="159" y="50" width="292" height="70" uuid="000b21cf-0b2f-4cc5-912d-e03eade90f8d"/>
+				<text><![CDATA[
+A-14/5 Kamal Vihar Burari Delhi-110084
+      anandjha1806@gmail.com
+	+91 7827928488]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="452" y="66" width="100" height="30" uuid="ca8f2f36-c952-4b27-af0b-d08d1d385293"/>
+				<textFieldExpression><![CDATA[$P{billNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="447" y="91" width="100" height="30" uuid="ac0411bd-4c31-4949-8fe1-2df1493d273b"/>
+				<textFieldExpression><![CDATA[$P{billDate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="214" splitType="Stretch">
+			<line>
+				<reportElement x="-17" y="-8" width="592" height="1" uuid="5761e5ac-1a08-4e66-8ced-3a01141a7d30">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="1" y="13" width="100" height="30" uuid="9a13bcc3-f8c8-4fcd-802e-ed329585dd80"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Doctor Name :]]></text>
+			</staticText>
+			<line>
+				<reportElement x="85" y="30" width="265" height="1" uuid="3e64d95b-678f-4ec2-9d10-117d387c4ca8">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="-19" y="41" width="593" height="1" uuid="3ac8a7b6-5081-4031-9345-ea509c0b55cd">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="0" y="60" width="100" height="30" uuid="b2b8dc15-b8ae-4886-a58e-e105c823d72c"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Patient Name :]]></text>
+			</staticText>
+			<line>
+				<reportElement x="89" y="75" width="251" height="1" uuid="fc942052-9a50-48c7-b74f-32b6e299f5f0">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="0" y="92" width="100" height="30" uuid="256cec60-28bf-4d5c-b5ef-eed7525c681e"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Patient Gender:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="326" y="92" width="100" height="30" uuid="56cb50fb-0618-445f-966d-707985371364"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Patient Age :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="122" width="100" height="30" uuid="255611e5-3ab7-481c-9f8c-41f976d72513"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Disease :]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-20" y="144" width="591" height="1" uuid="f32fbd7b-5c9b-47cf-8837-ae2fa89b5a18"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="159" width="100" height="30" uuid="22452239-fd8c-420d-a491-2efa6efa7d70"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Medicine: ]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-19" y="184" width="594" height="1" uuid="66f09072-c626-4824-a294-8fe67d18fabe"/>
+			</line>
+			<textField>
+				<reportElement x="93" y="12" width="100" height="30" uuid="f92ff01f-74c9-404b-b4c1-cec8cfcd37e1"/>
+				<textFieldExpression><![CDATA[$P{doctorFirstName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="139" y="13" width="100" height="30" uuid="1ddbaeea-a2a7-4dae-95da-c99fad3238de"/>
+				<textFieldExpression><![CDATA[$P{doctorLastName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="89" y="59" width="100" height="30" uuid="ad551584-e207-4657-9df2-ff945ca7c2b8"/>
+				<textFieldExpression><![CDATA[$P{patientFirstName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="135" y="59" width="100" height="30" uuid="e0159549-f436-43c3-b794-816805362c5d"/>
+				<textFieldExpression><![CDATA[$P{patientLastName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="89" y="94" width="100" height="30" uuid="893ac5f8-1c2e-40a6-85c0-feb392076470"/>
+				<textFieldExpression><![CDATA[$P{gender}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="403" y="94" width="100" height="30" uuid="c23a4138-7290-483d-a277-5f07ddd7f424"/>
+				<textFieldExpression><![CDATA[$P{age}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="65" y="123" width="100" height="30" uuid="76bd0853-1241-4985-a2d5-b15669aebc09"/>
+				<textFieldExpression><![CDATA[$P{disease}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="132" splitType="Stretch">
+			<staticText>
+				<reportElement x="2" y="3" width="100" height="30" uuid="65548167-db9d-4650-990a-b80ae73f0bf9"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[1. ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="17" y="5" width="100" height="30" uuid="4440bb3f-0405-47fb-ac70-526071b85fcc"/>
+				<textFieldExpression><![CDATA[$P{medicine}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="77" splitType="Stretch">
+			<line>
+				<reportElement x="-20" y="48" width="595" height="1" uuid="da998340-f29f-4710-b639-cfec7b600898">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="133" y="56" width="431" height="21" uuid="6db21b4e-2ffb-449d-b9d6-75f1ce6f9c90"/>
+				<text><![CDATA[This is computer generated invoice no signature required]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="485" y="59" width="100" height="18" uuid="a5d5994a-732c-47c4-af89-2750900a1b6b"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="-20" y="2" width="594" height="1" uuid="1b37c2b1-535b-4b7a-8ea9-43378b2a61c7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="9" y="21" width="100" height="30" uuid="5ecddc47-339f-4ff9-bede-152c0b2b1d5c"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Total Fees :]]></text>
+			</staticText>
+			<line>
+				<reportElement x="81" y="40" width="269" height="1" uuid="9816e89f-0397-47f4-a9d6-5f0b3c530da8"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="103" y="24" width="100" height="30" uuid="c3501308-b0a7-435f-a2f6-9483b8cd4ba9"/>
+				<text><![CDATA[Only]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="80" y="23" width="100" height="30" uuid="f1b0e1c9-bb0d-45c7-a5e4-672aca4b4af4"/>
+				<textFieldExpression><![CDATA[$P{fees}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
